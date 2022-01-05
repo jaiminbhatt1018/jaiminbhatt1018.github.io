@@ -25,11 +25,8 @@ body{
     display: flex;
     flex-direction: row;
     justify-content:space-evenly;
-    font-size: 1vh;
     height: 5.5vh;
-    width: 77vw;
-    margin-left: 1vw;
-    
+    width: 100%;    
 }
 .navbar h3{
     font-size: 1.4vw;
@@ -43,17 +40,29 @@ body{
   color: rgb(238, 238, 238);
     padding-top: 1vh;
     font-size:1.1vw;
+    height: 5vh;
 }
 
 .navbar ul li:hover{
     background-color: red;
     transition: 0.8s;
+    animation:  nav_animation 0.8s;
+}
+@keyframes nav_animation{
+0%{
+    height: 0vh;
+}
+100%{
+    height: 5vh;
+}
+
 }
 .img-section{
     z-index: -10;
     width:100vw;
     height:100vh;
  overflow: hidden;
+ 
 }
 .section1_1{
     display: flex;
@@ -63,6 +72,7 @@ body{
    height: 100vh;
   background-image: url('images/back-img.jpg');
   background-size: cover;
+  
 }
 .section1_1 h1{
     overflow: hidden;
@@ -72,7 +82,7 @@ body{
     animation: text 6s steps(19) infinite;
     color: whitesmoke ;
     font-size: 4.5vw;
-    font-family: "poppins";
+    font-family: 'poppins';
     border-right: 2px solid white;
     z-index: 10;
 }
@@ -82,9 +92,9 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-   
+    align-items: center;   
 }
+
 .discription{
    
     width: 40vw;
@@ -166,8 +176,7 @@ align-items:flex-end;
 
 .html,.php{
     width: 0vw;
-    animation:bar1 5s 3;
-    animation-fill-mode: forwards;
+    animation:bar1 5s infinite forwards;
 }
 .skills_info img{
 height: 10vh;
@@ -175,42 +184,104 @@ width: 10vh;
 clip-path: circle(50%);
 margin-bottom: 2vh;
 }
+.eduaction{
+    width: 80vw;
+    height: 45vh;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    overflow: hidden;
+    margin-left: 9vw;
+   }
+.school,.clg{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+    height: 100%;
+    align-items: flex-start;
+    padding-left: 2vw;
+}
+.school h1,.clg h1{
+    font-size: 1.5vw;
+    color: red;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80vw;
+    height: 70vh;
+}
+.personal_info{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    margin-left: 4vw;
+}
+.personal_info h1{
+    color: red;
+    font-weight: bolder;
+    font-size: 1.5vw;
+}
+label{
+    color: black;
+     font-size: 1.7vw;
+
+}
+
+
 
 .child_contact{
-width: 70vw;
-height: 70vh;
+    width: 50%;
+    height: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
 }
-#fname,#lname,#email,#number{
-width: 20vw;
-height: 7vh;
-font-size: medium;
+#visitor_name,#email,#number{
+width: 33vw;
+height: 6vh;
+font-size: 1.8vw;
 font-family: 'poppins';
-font-weight: bolder;
 padding-left: 1vw;
 margin: 1vw 0vw 1vw 0vw;
-border-radius: 1vw;
 border: 0.5px solid black;
 }    
-#desc{
-    height: 20vh;
-    width: 70vw;
-    font-size: medium;
-font-family: 'poppins';
-font-weight: bolder;
-}
 .child_contact button{
     width: 10vw;
-height: 7vh;
-border-radius: 10px;
-font-size: medium;
+height: 6vh;
+font-size: 1.8vw;
 font-family: 'poppins';
 font-weight: bolder;
 background-color: red;
 color: white;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     width: 100vw;
+   height: 50vh;
+  background-color: black;
+  background-size: cover;
+  margin: 1vw 0vw 0vw 0vw;
+}
+.footer p{
+    font-family: 'poppins';
+   text-decoration: none;
+    color: white;
+    font-size: 1.5vw;
+    font-weight: bolder;
+    
 }
 @keyframes bar1{
     0%{
@@ -222,7 +293,7 @@ color: white;
 }
 .css{
     width: 0vw;
-    animation:bar2 5s 3 forwards;
+    animation:bar2 5s infinite forwards;
 }
 @keyframes bar2{
     0%{
@@ -235,7 +306,7 @@ color: white;
 
 .js,.c{
     width: 0vw;
-    animation:bar3 5s 3 forwards;
+    animation:bar3 5s infinite forwards;
 }
 @keyframes bar3{
     0%{
@@ -261,8 +332,21 @@ color: white;
      font-weight: bolder;
 }
 .navbar ul li{
-    font-size:3.5vw;
+    width: 100%;
+    font-size:2.5vw;
 }
+.navbar ul{
+width: 100%;
+margin-left: 0%;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
 .my_info{
     width: 100vw;
     height: 100vh;
@@ -280,41 +364,80 @@ color: white;
 }
 .mydetails{
     width: 82vw;
-    height: 70vw;
+    height: 50vh;
     border-radius: 20px;
-    box-shadow: rgba(240, 7, 7, 0.199) 0px 10px 50px;
+    box-shadow: rgb(240 7 7 / 20%) 0px 10px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 
 }
 .mydetails p,a, pre{
     text-align: left;
     font-family: 'poppins';
-    font-size: 1.8vh;
+    font-size: 3.7vw;
    text-decoration: none;
     color: black;
+    width: 77vw;
     
 
 }
 .mydetails i{
     font-size: x-large;
 }
-
+.eduaction{
+    flex-direction: column;
+   }
+   .school, .clg{
+width: 100%;
+   }
+.school h1,.clg h1,label{
+    font-size: 4vw;
+}   
+.contacts{
+    flex-direction: column;
+    height: 70vh;
+    width: 80vw;
+}
+.personal_info{
+    width: 100%;
+}
+.personal_info h1{
+    font-size: 4vw;
+    margin: 0%;
+}
+#visitor_name, #email, #number{
+    height: 4vh;
+    font-size: 3vw;
+    width: 75vw;
+}
+.child_contact button{
+    width: 20vw;
+    height: 2.5vh;
+    font-size: 2.5vw;
 }
 .footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-     width: 100vw;
-   height: 50vh;
-  background-color: black;
-  background-size: cover;
-  margin: 1vw 0vw 0vw 0vw;
+    height: 20vh;
 }
 .footer p{
-    font-family: 'poppins';
-   text-decoration: none;
-    color: white;
-    font-size: 1.5vw;
-    font-weight: bolder;
-    
+    font-size: 4vw;
+    text-align: center;
+    width: 90%;
 }
+.child_contact{
+    width: 100%;
+}
+.section1_1{
+    background-image: url('images/jaimin.jpeg');
+    background-size:cover;
+}
+.section1_1 h1{
+    color: red;
+    font-size: 8.2vw;
+    font-weight: bolder;
+    margin-bottom: 20vh;
+}
+
+}
+
